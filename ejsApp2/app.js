@@ -59,12 +59,25 @@ app.get('/error', function(req, res) {
 
 
 
+// Movies page 
+var mymovies = ["Dolemite","GoodBoys","LongShot", "Booksmart"]
+
+app.get('/movies', function(req, res) {
+   
+    res.render('pages/movies',{
+        movie1:"Dolemite is My Name",
+        movie2:"Good Boys",
+        movie3:"Long Shot",
+        movie4:"Booksmart"
+
+    });
+});
+
 // tvshow page 
 var myTvShows = ["Friends","Money Heist","Bridgerton"]
 
 
 app.get('/tvshows', function(req, res) {
-
    
     res.render('pages/tvshows',{
         tvShow1:"Black Mirror",
@@ -74,6 +87,7 @@ app.get('/tvshows', function(req, res) {
 
     });
 });
+
 
 
 
